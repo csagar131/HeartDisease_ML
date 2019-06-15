@@ -16,7 +16,7 @@ from sklearn.ensemble import RandomForestClassifier
 # In[3]:
 
 
-df = pd.read_csv('I:\ML_ProjectAdhoc\Shashank_ML\Heart-Disease-ML-Project\heart.csv')
+df = pd.read_csv('/root/Github/HeartDisease_ML/heart.csv')
 df.head()
 
 
@@ -25,18 +25,14 @@ df.head()
 # In[4]:
 
 
-from sklearn.tree import DecisionTreeClassifier
+
 features = df[['age','sex','cp','trestbps','chol','fbs','restecg','thalach','exang','oldpeak','slope','ca','thal']]
 features = features.fillna(features.mean())
 features = features.values
 label = df[['target']].values
 
 x_train,x_test,y_train,y_test = train_test_split(features,label,test_size=0.2,random_state=4)
-heartTree = DecisionTreeClassifier(criterion="entropy", max_depth = 4)
-heartTree.fit(x_train,y_train)
-predict = heartTree.predict(x_test)
 
-print("Decision Tree Accuracy:- ",metrics.accuracy_score(y_test,predict))
 
 
 # # random forest classifier
@@ -85,7 +81,7 @@ x_test[0].shape
 # In[35]:
 
 
-list(trained.predict([a]))[0]
+print("predicted output:-",list(trained.predict([a]))[0])
 
 
 # In[ ]:
