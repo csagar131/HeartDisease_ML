@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Heart_Disease</title>
+<style type="text/css">
+	body{
+		background-image:url(heart.jpg);
+		background-size:cover;
+		background-attachement:fixed;
+	}
+		.content{
+			background: white;
+			width: 50%;
+			padding:  40px;
+			margin: 100px auto;
+			font-family: calibri;
+		}
+		p{
+			font-size: 25px;
+			color: black;
+		}
+</style>
+
+</head>
+<h1>Please Fill The Following Details:--->  </h1>
+<form>
+
+	<table>
+		
+<tr><td>Enter age<td><input name="age" type="number"></td></tr>
+Enter sex
+<input type="radio" name="gender" value="male"> Male</td></tr>
+<input type="radio" name="gender" value="female"> Female</td></tr>
+<tr><td>Enter cp<td><input name="cp" type="number"></td></tr>
+<tr><td>Enter trestbps<td><input name="trestbps" type="number"></td></tr>
+<tr><td>Enter chol<td><input name="chol" type="number"></td></tr>
+<tr><td>Enter fbs<td><input name="fbs" type="number"></td></tr>
+<tr><td>Enter restecg<td><input name="restecg" type="number"></td></tr>
+<tr><td>Enter thalach<td><input name="thalach" type="number"></td></tr>
+<tr><td>Enter exang<td><input name="exang" type="number"></td></tr>
+<tr><td>Enter oldpeak<td><input name="oldpeak" type="number"></td></tr>
+<tr><td>Enter slope<td><input name="slope" type="number"></td></tr>
+<tr><td>Enter ca<td><input name="ca" type="number"></td></tr>
+<tr><td>Enter thal<td><input name="thal" type="number"></td></tr>
+<tr><td>Enter target<td><input name="target" type="number"></td></tr>
+<tr><td><input type="submit" value="submit"></td></tr>
+</table>
+</form>
+</html>
