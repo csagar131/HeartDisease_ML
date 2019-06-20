@@ -46,7 +46,7 @@ label = df[['target']].values
 
 
 
-x_train,x_test,y_train,y_test = train_test_split(features,label,test_size=0.2,random_state=4)
+x_train,x_test,y_train,y_test = train_test_split(features,label,test_size=0.01,random_state=4)
 
 clf = RandomForestClassifier(criterion='entropy',n_estimators=7)
 
@@ -59,12 +59,43 @@ predicted = trained.predict(x_test)
 
 from numpy import array
 a = array( [age,gender,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal] )
-#a = array( [35,0,1,90,100,1,1,60,1,1,1,1,1] )
+
 
 a.reshape(-1,1)
 
 
 result = list(trained.predict([a]))[0]
+
+#---------------------------------------------------------------------------------------------------------------------------
+
+if result == 0:
+	arrow = 1
+elif result == 1:
+	arrow = 2
+
+
+
+from gplot import Gauge
+
+labels = ['POSITIVE','NEGATIVE']
+colors = ['#BA2F16','#45CE30']
+#arrow = 1
+title='Heart Disease Predictor'
+fname = False
+g = Gauge()
+g.gauge(labels,colors, arrow, title,fname)
+
+
+
+
+
+
+#-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -72,14 +103,22 @@ print("Content-type:text/html\r\n\r\n")
 print('<html>')
 print('<head>')
 print('<title>Hello Word - First CGI Program</title>')
+
 print('</head>')
 print('<body>')
 print('<h1>Heart disease predictor is here where are you??\n\n</h1>')
 #print('<h2> predicted output is --:',result,'</h2>')
 if result == 0:
-  print("<h2> You dont have heart disease. </h2>")
+	print("<h2> You dont have heart disease. </h2>")
+	print("<p>")
+	print("<div background-image:url('negative.png')></div>")
+	print("</p>")
 else:
-  print("<h2> Ohh! You may have heart disease. </h2>")
+	print("<h2> Ohh! You may have heart disease. </h2>")
+	print("<p>")
+	print("<div background-image:url('positive.png')></div>")
+	print("</p>")
+
 #print('<h3>accuracy from random forest algorithm',metrics.accuracy_score(y_test,predicted)*100,'</h3>')
 #print('<h3>values</h3>')
 print('</body>')
