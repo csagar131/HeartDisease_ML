@@ -1,0 +1,51 @@
+body{
+	background-image: url(j.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover; 
+     
+     } 
+#clr{
+	color: orange;
+	display: inline;
+}
+#clr1{
+	color: #C0C0C0;
+	display: inline;
+
+}
+div.center{
+	position: absolute;
+	top: 10%;
+	left: 40%;
+
+}
+.box{
+	color: blue;
+	border-radius: 5px;
+	background-color: #C0C0C0;
+	width: 210px;
+	height: 27px;
+	margin-top: 40px; 
+}
+.sox{
+	color: blue;
+	border-radius: 5px;
+	background-color: #C0C0C0;
+	width: 210px;
+	height: 27px;
+	margin-top: 20px;
+}
+.lox{
+	color: white;
+	background-color: orange;
+}
+.cox{
+	font-size: "5";
+	color: white;
+	margin-bottom: 20px;
+	background-color: orange;
+	border-radius: 5px;
+	width: 210px;
+	height: 27px;
+}
