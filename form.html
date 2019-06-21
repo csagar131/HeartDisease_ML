@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +14,21 @@
 			font-size: 25px;
 			color: black;
 		}
+
+abbr[title]
+ {
+	border-bottom: none !important;
+	cursor: inherit !important;
+	text-decoration: none ! important;
+ }
+
 </style>
 
 </head>
 <body>
 <div class="content">
 <h1>Please Fill The Following Details:  </h1>
-<form   action = "/cgi-bin/data.cgi" method = "POST"  >
+<form   action = "/cgi-bin/data.cgi" method = "GET"  >
 
 	<table>
 		
@@ -38,7 +47,7 @@
 <tr><td><font size="5">Enter <abbr title="slope">slope</abbr></font><td><input min="0" max="2" name="slope" type="number" required style="width: 180px;"></td></tr>
 <tr><td><font size="5">Enter <abbr title="Number of mazoe vessels">ca</abbr></font><td><input min="0" max="5" name="ca" type="number" required style="width: 180px;"></td></tr>
 <tr><td><font size="5">Enter <abbr title="Duration of exercise test">thal</abbr></font><td><input min="0" max="3" name="thal" type="number" required style="width: 180px;"></td></tr>
-<tr><td><input type="submit" value="Submit" style= "margin-left:0px;margin-top:50px;  height:30px; width:70%; font-size:20px"></td></tr>
+<tr><td><input type="submit" value="Submit" style= "margin-left:0px;margin-top:50px;  height:30px; width:70%; font-size:20px color:"red"></td></tr>
 </table>
 </form>
 </div>
