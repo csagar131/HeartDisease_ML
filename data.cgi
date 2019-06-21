@@ -87,15 +87,18 @@ g.gauge(labels,colors, arrow, title,fname)
 
 
 
-
-
-
 #-------------------------------------------------------------------------------------------------------------------------
 
 
 
+a =''' 
+<form action = '/cgi-bin/maps.cgi' method = "GET" >
+<input class='box' type='text' placeholder='  Enter city' name='city' required /></br>
+<input type='submit' value='Find Doctors' /></br>
+</form>
 
 
+'''
 
 
 
@@ -107,7 +110,6 @@ print('<title>Heart Disease Predictor</title>')
 print('</head>')
 print('<body>')
 print('<h1>Heart disease predictor is here where are you??\n\n</h1>')
-#print('<h2> predicted output is --:',result,'</h2>')
 if result == 0:
 	print("<h2> You dont have heart disease. </h2>")
 	print("<p>")
@@ -116,10 +118,10 @@ if result == 0:
 else:
 	print("<h2> Ohh! You may have heart disease. </h2>")
 	print("<p>")
-	#print("<img src='../html/heart.jpg'/>")
 	print("<img src='http://13.232.35.109/positive.jpg'/>")
 	print("</p>")
-
+	print(a)
+	
 print('</body>')
 print('</html>')
 

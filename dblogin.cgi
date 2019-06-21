@@ -25,35 +25,31 @@ form = cgi.FieldStorage()
 username = form.getvalue('Username')
 password  = form.getvalue('Password')
 
-button1='''
-<button id="myButton" class="float-left submit-button" >Click Here</button>
-
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "http://13.232.35.109/form.html";
-    };
-</script>
-'''
-
-button2='''
-<button id="myButton" class="float-left submit-button" >Click Here</button>
-
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "http://13.232.35.109/login.html";
-    };
-</script>
-'''
 
 
+for row in myresult:
+        if (username == row[0]) and (password == row[1]):
+                print("Content-type:text/html\n")
+                print('<script>window.location.href="http://13.232.35.109/form.html";</script>')
 
-
-if (username == myresult[0][0]) and (password == myresult[0][1]):
-	print("Content-type:text/html\n")
-	print("<h2>Authentication Successfull...</h2>")
-	print(button1)
 else:
 	print("Content-type:text/html\n")
 	print("<h2>Username and Password Incorrect</h2>")
 	print(button2)
 
+
+mycursor.close()
+
+
+'''
+
+if (username == myresult[0][0]) and (password == myresult[0][1]):
+	
+	print("Content-type:text/html\n")
+	print('<script>window.location.href="http://13.232.35.109/form.html";</script>')
+else:
+	print("Content-type:text/html\n")
+	print("<h2>Username and Password Incorrect</h2>")
+	print(button2)
+
+'''
