@@ -1,31 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[35]:
-
-
 import googlemaps
 import folium
 import time
 
 
-# In[29]:
+
 
 
 #define our client
-api_key="AIzaSyAWmyrQyw7hRpYIHGTEDJlj09fTLSG_MDA"
+api_key=""
 gmaps = googlemaps.Client(api_key)
 
-
-# In[36]:
 
 
 your_city = input("Where do you live :- ").replace(' ','+')
 current_location = gmaps.geocode(your_city)
 time.sleep(3)
 
-
-# In[31]:
 
 
 #this will print latitude and longitude of current location
@@ -62,10 +55,4 @@ for place in places_result['results']:
     except:
         pass
 my_map3.save(" my_map1.html ")     
-
-
-# In[ ]:
-
-
-
 
