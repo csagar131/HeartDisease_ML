@@ -14,12 +14,26 @@ body{
 	display: inline;
 
 }
+#clr2{
+	color: white;
+	display: inline;
+}
+#clr3{
+	color:white;
+	display:inline;
+}
 div.center{
 	position: absolute;
 	top: 10%;
 	left: 40%;
 
 }
+div.corner{
+	position: absolute;
+	top:10%;
+	left:70%;
+}
+
 .box{
 	color: blue;
 	border-radius: 5px;
@@ -41,9 +55,9 @@ div.center{
 	background-color: orange;
 }
 .cox{
-	font-size: "5";
+	
 	color: white;
-	margin-bottom: 20px;
+	margin-top: 30px;
 	background-color: orange;
 	border-radius: 5px;
 	width: 210px;
