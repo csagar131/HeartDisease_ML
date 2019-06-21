@@ -102,7 +102,7 @@ g.gauge(labels,colors, arrow, title,fname)
 print("Content-type:text/html\r\n\r\n")
 print('<html>')
 print('<head>')
-print('<title>Hello Word - First CGI Program</title>')
+print('<title>Heart Disease Predictor</title>')
 
 print('</head>')
 print('<body>')
@@ -111,16 +111,15 @@ print('<h1>Heart disease predictor is here where are you??\n\n</h1>')
 if result == 0:
 	print("<h2> You dont have heart disease. </h2>")
 	print("<p>")
-	print("<div background-image:url('negative.png')></div>")
+	print("<img src='http://13.232.35.109/negative.jpg'/>")
 	print("</p>")
 else:
 	print("<h2> Ohh! You may have heart disease. </h2>")
 	print("<p>")
-	print("<div background-image:url('positive.png')></div>")
+	#print("<img src='../html/heart.jpg'/>")
+	print("<img src='http://13.232.35.109/positive.jpg'/>")
 	print("</p>")
 
-#print('<h3>accuracy from random forest algorithm',metrics.accuracy_score(y_test,predicted)*100,'</h3>')
-#print('<h3>values</h3>')
 print('</body>')
 print('</html>')
 
