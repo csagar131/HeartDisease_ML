@@ -21,7 +21,7 @@ print('<script>window.location.href="http://13.126.204.181/my_map1.html";</scrip
 
 #define our client
 '''
-api_key="AIzaSyAWmyrQyw7hRpYIHGTEDJlj09fTLSG_MDA"
+api_key=""
 gmaps = googlemaps.Client(api_key)
 
 
