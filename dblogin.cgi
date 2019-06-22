@@ -30,12 +30,12 @@ password  = form.getvalue('Password')
 for row in myresult:
         if (username == row[0]) and (password == row[1]):
                 print("Content-type:text/html\n")
-                print('<script>window.location.href="http://13.232.35.109/form.html";</script>')
+                print('<script>window.location.href="http://13.126.204.181/form.html";</script>')
 
 else:
 	print("Content-type:text/html\n")
 	print("<h2>Username and Password Incorrect</h2>")
-	print(button2)
+	#print(button2)
 
 
 mycursor.close()
