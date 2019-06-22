@@ -36,7 +36,7 @@ thal = form.getvalue('thal')
 
 # machine learning code
 
-df = pd.read_csv('/var/www/cgi-bin/heart.csv')
+df = pd.read_csv('/usr/lib/cgi-bin/heart.csv')
 
 
 features = df[['age','sex','cp','trestbps','chol','fbs','restecg','thalach','exang','oldpeak','slope','ca','thal']]
@@ -68,26 +68,8 @@ result = list(trained.predict([a]))[0]
 
 #---------------------------------------------------------------------------------------------------------------------------
 
-if result == 0:
-	arrow = 1
-elif result == 1:
-	arrow = 2
 
 
-
-from gplot import Gauge
-
-labels = ['POSITIVE','NEGATIVE']
-colors = ['#BA2F16','#45CE30']
-#arrow = 1
-title='Heart Disease Predictor'
-fname = False
-g = Gauge()
-g.gauge(labels,colors, arrow, title,fname)
-
-
-
-#-------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -113,15 +95,11 @@ print('<h1>Heart disease predictor is here where are you??\n\n</h1>')
 if result == 0:
 	print("<h2> You dont have heart disease. </h2>")
 	print("<p>")
-	print("<img src='http://13.232.35.109/negative.jpg'/>")
+	print("<img src='http://13.126.100.12/negative.jpg'/>")
 	print("</p>")
 else:
 	print("<h2> Ohh! You may have heart disease. </h2>")
 	print("<p>")
-	print("<img src='http://13.232.35.109/positive.jpg'/>")
+	print("<img src='http://13.126.100.12/positive.jpg'/>")
 	print("</p>")
 	print(a)
-	
-print('</body>')
-print('</html>')
-
