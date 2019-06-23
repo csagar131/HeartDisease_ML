@@ -13,15 +13,14 @@ form = cgi.FieldStorage()
 
 city = form.getvalue('city')
 
-os.system("python3 Maps.py "+city)
+#os.system("python3 Maps.py "+city)
 print("Content-type:text/html\r\n\r\n")
-print('<script>window.location.href="http://13.126.204.181/my_map1.html";</script>')
 
 
 
 #define our client
-'''
-api_key=""
+
+api_key="your api key"
 gmaps = googlemaps.Client(api_key)
 
 
@@ -59,9 +58,8 @@ for place in places_result['results']:
     except:
         pass
 
+my_map3.save("/var/www/html/my_map1.html")     
+print('<script>window.location.href="http://13.126.100.12/my_map1.html";</script>')
 print("<h1>",your_city,"</h1>")
-print("Content-type:text/html\n")
-print('<script>window.location.href="my_map3";</script>')
-#my_map3.save("http://13.232.35.109/var/www/html/my_map1.html")     
-print("<h1>",your_city,"</h1>")
-'''
+
+
