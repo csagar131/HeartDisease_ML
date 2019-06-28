@@ -11,7 +11,7 @@ import sys
 
 
 #define our client
-api_key="AIzaSyAWmyrQyw7hRpYIHGTEDJlj09fTLSG_MDA"
+api_key="your api key"
 gmaps = googlemaps.Client(api_key)
 
 
