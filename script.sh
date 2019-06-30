@@ -74,3 +74,20 @@ ok "Database $dbname and user $dbuser created with a password $passwd"
 
 
 
+
+uname='sagar'
+passwd='sagar'
+fname='sagar'
+lname='chouhan'
+
+
+mysql -uroot -proot users << EOF
+create table login(username varchar(30) primary key not null,password varchar(30) not null,fname varchar(30),lname varchar(30));
+insert into login (username,password,fname,lname) values ('$uname','$passwd','$fname','$lname');
+EOF
+
+
+
+
+
+
