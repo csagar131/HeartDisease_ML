@@ -37,6 +37,8 @@ git clone https://github.com/csagar131/HeartDisease_ML
 
 cp /root/HeartDisease_ML/*.html /var/www/html/
 cp /root/HeartDisease_ML/*.jpg /var/www/html/
+cp /root/HeartDisease_ML/*.css /var/www/html/
+cp /root/HeartDisease_ML/*.csv /var/www/html/
 echo "copying to /www/html successful"
 
 cp /root/HeartDisease_ML/*.cgi /usr/lib/cgi-bin/
