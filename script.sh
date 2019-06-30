@@ -44,6 +44,15 @@ cp /root/HeartDisease_ML/*.py /usr/lib/cgi-bin/
 echo "copying to /cgi-bin/ successful"
 
 
+echo "-------------------------------------#ATTENTION#---------------------------------------------------------"
+
+echo " IF IT ASK FOR PASSWORD JUST PRESS ENTER "
+
+echo "---------------------------------#THANK-YOU#-------------------------------------------------------"
+
+
+
+
 dbname='users'
 dbuser='dbuser'
 passwd='Resi*123'
