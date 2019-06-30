@@ -1,6 +1,9 @@
+#!/bin/bash
 apt update
 
-#    apt upgrade -y yes
+apt upgrade -y yes
+
+apt install vim -y
 
 apt install apache2 -y
 
@@ -21,6 +24,7 @@ pip3 install matplotlib
 pip3 install sklearn
 pip3 install googlemaps
 pip3 install folium
+pip3 install mysql_connector
 
 
 a2enmod cgid
@@ -40,6 +44,33 @@ cp /root/HeartDisease_ML/*.py /usr/lib/cgi-bin/
 echo "copying to /cgi-bin/ successful"
 
 
+dbname='users'
+dbuser='dbuser'
+passwd='Resi*123'
+
+
+
+# Functions
+ok() { echo -e '\e[32m'$dbname'\e[m'; } # Green
+
+#EXPECTED_ARGS=3
+#E_BADARGS=65
+MYSQL=`which mysql`
+
+Q1="CREATE DATABASE IF NOT EXISTS $dbname;"
+Q2="GRANT ALL ON *.* TO '$dbuser'@'localhost' IDENTIFIED BY '$passwd';"
+Q3="FLUSH PRIVILEGES;"
+SQL="${Q1}${Q2}${Q3}"
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: $0 dbname dbuser dbpass"
+  exit $E_BADARGS
+fi
+
+$MYSQL -uroot -p -e "$SQL"
+
+ok "Database $dbname and user $dbuser created with a password $passwd"
 
 
 
