@@ -98,5 +98,13 @@ EOF
 
 
 
+ip=`curl https://ipinfo.io/ip`
 
+
+sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.cgi
+sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.html
+
+
+
+echo "your current public ip is ------> $ip"
 
