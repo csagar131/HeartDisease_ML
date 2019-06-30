@@ -107,7 +107,7 @@ sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.cgi
 sed -i -e 's/13.126.100.12/'$ip'/g' /var/www/html/*.html
 sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.py
 
-
+echo "---------------------------------------READ-BELOW--------------------------------------------"
 echo "your current public ip is ------> $ip"
 echo " you need insert your own google map api key"
 echo " insert them in the /usr/lib/cgi-bin/maps.cgi and Maps.py "
@@ -115,4 +115,5 @@ echo " go to your security group in your instance and allow all traffic ie. all 
 echo " congrats setup successfull"
 echo " you can contribute further in this project and mail me at chouhansagar131@gmail.com for any updates and query"
 echo " thank you"
+echo "---------------------------------------------------------------------------------------------"
 
