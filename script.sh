@@ -102,8 +102,8 @@ ip=`curl https://ipinfo.io/ip`
 
 
 sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.cgi
-sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.html
-
+sed -i -e 's/13.126.100.12/'$ip'/g' /var/www/html/*.html
+sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.py
 
 
 echo "your current public ip is ------> $ip"
