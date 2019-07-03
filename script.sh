@@ -52,14 +52,9 @@ echo " IF IT ASK FOR PASSWORD JUST PRESS ENTER "
 
 echo "---------------------------------#THANK-YOU#-------------------------------------------------------"
 
-
-
-
 dbname='users'
 dbuser='dbuser'
 passwd='Resi*123'
-
-
 
 # Functions
 ok() { echo -e '\e[32m'$dbname'\e[m'; } # Green
@@ -83,25 +78,17 @@ $MYSQL -uroot -p -e "$SQL"
 
 ok "Database $dbname and user $dbuser created with a password $passwd"
 
-
-
-
 uname='sagar'
 passwd='sagar'
 fname='sagar'
 lname='chouhan'
-
 
 mysql -uroot -proot users << EOF
 create table login(username varchar(30) primary key not null,password varchar(30) not null,fname varchar(30),lname varchar(30));
 insert into login (username,password,fname,lname) values ('$uname','$passwd','$fname','$lname');
 EOF
 
-
-
-
 ip=`curl https://ipinfo.io/ip`
-
 
 sed -i -e 's/13.126.100.12/'$ip'/g' /usr/lib/cgi-bin/*.cgi
 sed -i -e 's/13.126.100.12/'$ip'/g' /var/www/html/*.html
@@ -113,6 +100,7 @@ echo " you need insert your own google map api key"
 echo " insert them in the /usr/lib/cgi-bin/maps.cgi and Maps.py "
 echo " go to your security group in your instance and allow all traffic ie. all port "
 echo " congrats setup successfull"
+echo " you can login to project using username-sagar and passwd-sagar or signup new user"
 echo " you can contribute further in this project and mail me at chouhansagar131@gmail.com for any updates and query"
 echo " thank you"
 echo "---------------------------------------------------------------------------------------------"
